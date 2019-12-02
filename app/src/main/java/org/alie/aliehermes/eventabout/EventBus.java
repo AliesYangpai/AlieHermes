@@ -121,7 +121,7 @@ public class EventBus {
      */
     private List<SubscribeMethod> getSubscribMethod(Object object) {
         List<SubscribeMethod> list = new ArrayList<>();
-        Class<?> aClass = object.getClass();
+        Class<?> aClass = (Class<?>) object;
         while (aClass != null) {
             String name = aClass.getName();
             if (name.startsWith("java.") || name.startsWith("javax.") ||
