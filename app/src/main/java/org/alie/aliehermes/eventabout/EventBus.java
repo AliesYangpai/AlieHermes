@@ -131,7 +131,7 @@ public class EventBus {
             Method[] methods = aClass.getDeclaredMethods();
             // 找注解
             for (Method method : methods) {
-                Subscribe subscribe = method.getAnnotation(Subscribe.class);
+                Student.Subscribe subscribe = method.getAnnotation(Student.Subscribe.class);
                 if (subscribe == null) {
                     continue;
                 }

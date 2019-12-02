@@ -11,7 +11,6 @@ import android.widget.Button;
 
 import org.alie.aliehermes.eventabout.EventBus;
 import org.alie.aliehermes.eventabout.Student;
-import org.alie.aliehermes.eventabout.Subscribe;
 import org.alie.aliehermes.eventabout.ThreadMode;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         startActivity(intent);
     }
 
-    @Subscribe(threadMode = ThreadMode.Async)
+    @Student.Subscribe(threadMode = ThreadMode.Async)
     public void receive(Student student) {
         Log.i(TAG, "数据：" + student + " 当前线程：" + Thread.currentThread().getId());
     }
