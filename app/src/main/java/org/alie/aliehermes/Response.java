@@ -9,6 +9,8 @@ import android.os.Parcelable;
  * 版本
  */
 public class Response implements Parcelable {
+    // 返回对象的responseBean
+    private String data;
     protected Response(Parcel in) {
     }
 

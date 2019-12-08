@@ -10,6 +10,13 @@ tools:context=".SecondActivity">
     android:id="@+id/btn1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text ="send event"
+    android:text ="得到远端对象"
     />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="得到getUser"
+        />
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import org.alie.aliehermes.core.Hermes;
 import org.alie.aliehermes.eventabout.EventBus;
 import org.alie.aliehermes.eventabout.Student;
 import org.alie.aliehermes.eventabout.ThreadMode;
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        EventBus.getDefault().register(this);
+        Hermes.getDefault().init(this);
+        Hermes.getDefault().register(UserManager.class);
         initView();
         initListener();
     }
